@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+            <meta charset="uft-8">
+
+
+            <!-- //* HTML EX 1 - title for the page*// -->
+        <title>Benchmark</title>
+
+        <!-- //* CSS EX 11:- Give a maximum width to the body and center
+         it in the page, EX 12: Set every h1 to be centered, EX 13: Change 
+         the color of each link in the page, EX 14: Create a class with a border,
+         EX 15: Set table to have rounded borders, EX 16: Add margin between every
+         paragraph, EX 17: Create a class which change font size and boldness, 
+         EX 18: Create a class to hide a content , EX 19: Add a green border to 
+         each td, 
+         EX 20: Add a dotted red border to each tr *// -->
+
+        <style>
+
+            body {
+                width: 100%;
+                text-align: center;
+            }
+
+
+            #heading {
+                text-align: center;
+                align-items: center;
+            }
+
+            h1 {
+                text-align: center;
+                font-size: 30px;
+                
+            }
+
+            #ol {
+                text-align: left;
+                margin-left: 30em;
+                text-size-adjust: 20px;
+            }
+
+            #table {
+                align-items: center;
+                border: 2px solid;
+                border-radius: 3px;
+            }
+
+            .container {
+                text-align: center;
+                border: 2px solid;
+            }
+
+            a {
+                color: green
+            }
+
+            ul {
+                text-align: left;
+                margin-left: 25em;
+            }
+
+            #p1 {
+                margin-top: 2em;
+                margin-bottom: 1em;
+                font-size: 20px;
+                font-weight: bold;
+            }
+
+            #p2 {
+                margin-top: 1em;
+                font-size: 20px;
+                font-weight:bold;
+
+            }
+
+            .content {
+                display: none;
+            }
+
+            td {
+                border: 1px solid green;
+            }
+            
+            tr {
+                border-style: dotted red;
+            }
+
+        </style>
+
+
+
+
+    </head>
+
+<body>
+    <div id= "heading">
+        <!-- //* HTML EX 2 - heading*// -->
+        <h1> My First Benchmark</h1> 
+
+    </div>
+
+    <div id="p1">
+    <p> This is the first paragraph!</p>
+    </div>
+
+    <div id= "p2">
+    <p> This is the second paragraph!</p>
+    </div>
+
+    <div id= "ol">
+
+        <ol> <!-- //* HTML EX 3 - ordered list*// -->
+            
+            <li>This</li>
+
+            <li>Is</li>
+
+            <li>Ordered</li>
+
+            <li>List</li>
+
+        </ol>
+
+        <br>
+
+    </div>
+
+    <div id= "table"> 
+        <!-- //* HTML EX 4,5,6,7 - create table with 5 columns and 4 rows,
+         add image to each second cell of the first row, merge together 2 table
+         cells, add a link for every image*// -->
+
+        <table>
+
+            <tr>
+                <td>HTML</td>
+                <div id= "image1">
+                    <td>
+                        <a href="https://cdn.mos.cms.futurecdn.net/hFm4iWXhbw4c4rdcMH8tUD-320-80.jpg">
+                            <img src="html.jpg" alt="html image">
+                    </td>
+                        </a>
+                </div>
+                <td>BASIC</td>
+                <div id= "image2">
+                    <td>
+                        <a href="https://cdn.mos.cms.futurecdn.net/hFm4iWXhbw4c4rdcMH8tUD-320-80.jpg">
+                            <img src="html.jpg" alt="html image">
+                    </td>
+                        </a>
+                </div>
+                <td>TABLE</td>
+            </tr>
+            <tr>
+                <td>THIS</td>
+                <td>THIS</td>
+                <td colspan="2">THIS</td>
+                <td>THIS</td>
+            </tr>
+            <tr>
+                <td>IS</td>
+                <td>IS</td>
+                <td colspan="2">IS</td>
+                <td>IS</td>
+            </tr>
+            <tr>
+                <td>TABLE</td>
+                <td>TABLE</td>
+                <td colspan="2">TABLE</td>
+                <td>TABLE</td>
+            </tr>
+        </table>
+        
+        <br>
+
+        <hr> <!-- //* HTML EX 8 - divide the page using a horizontal line*// -->
+
+        <br>
+
+        <!-- //* HTML EX 9 - create a container with a nested paragraph
+         and a nested unordered list*// -->
+
+        <section class="container">
+
+            <h1> The benchmark is fun because:</h1>
+
+            <br>
+
+            <ul>
+                <li>I am exercising in a relaxed mode.</li>
+                <li>I learn and acquire new skills.</li>
+                <li>I extend my knowledge!</li>
+            </ul>
+
+        </section>
+
+        <section class="content">
+
+            <p> This content will be hidden</p>
+
+        </section>
+
+        <br>
+
+        <!-- //* HTML EX 10 - create a footer with some information
+         about the page creator*// -->
+        <footer>My name is Anton. I am a student in Strive School. I am the creator of this page. I like practicing coding. 
+
+        </footer>
+
+
+        <!-- //* JS EX 21-25" + DOM*// -->
+
+    <script>
+        
+        let x = "John";
+        
+        let y = "Doe";
+
+        console.log(x < y);
+
+        const profile = {
+            name: "Anton";
+            surname: "Petkov";
+            email: "antonpetkov88@gmail.com";
+        }
+
+        delete profile.email;
+
+        let listOfStrings = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"];
+
+        console.log(listOfStrings);
+
+        document.getElementById("container")
+
+        document.querySelectorAll("td")
+
+        
+
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>
