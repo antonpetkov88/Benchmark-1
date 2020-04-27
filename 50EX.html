@@ -96,22 +96,23 @@
 
     </head>
 
-<body>
-    <div id= "heading">
+    <body>
+        <div id= "heading">
         <!-- //* HTML EX 2 - heading*// -->
+        
         <h1> My First Benchmark</h1> 
 
-    </div>
+        </div>
 
-    <div id="p1">
-    <p> This is the first paragraph!</p>
-    </div>
+        <div id="p1">
+        <p> This is the first paragraph!</p>
+        </div>
 
-    <div id= "p2">
-    <p> This is the second paragraph!</p>
-    </div>
+        <div id= "p2">
+        <p> This is the second paragraph!</p>
+        </div>
 
-    <div id= "ol">
+        <div id= "ol">
 
         <ol> <!-- //* HTML EX 3 - ordered list*// -->
             
@@ -127,9 +128,10 @@
 
         <br>
 
-    </div>
+        </div>
 
-    <div id= "table"> 
+        <div id= "table"> 
+        
         <!-- //* HTML EX 4,5,6,7 - create table with 5 columns and 4 rows,
          add image to each second cell of the first row, merge together 2 table
          cells, add a link for every image*// -->
@@ -174,6 +176,8 @@
                 <td>TABLE</td>
             </tr>
         </table>
+
+        </div>
         
         <br>
 
@@ -208,40 +212,245 @@
 
         <!-- //* HTML EX 10 - create a footer with some information
          about the page creator*// -->
+
         <footer>My name is Anton. I am a student in Strive School. I am the creator of this page. I like practicing coding. 
 
         </footer>
 
 
-        <!-- //* JS EX 21-25" + DOM*// -->
-
     <script>
-        
-        let x = "John";
-        
-        let y = "Doe";
+        /*Exercise 21 - Given variable X = "John" and Y = "Doe", 
+        write on the console log "John <> Doe"*/
 
-        console.log(x < y);
+        function printJohnDoe () {
+            
+            let x = "John"
+        
+            let y = "Doe";
 
-        const profile = {
+        console.log(x + "<>" + y)
+        }
+        //Exercise 22 - Create an object with properties such Name, Surname, Email//
+
+        function createObject() {
+        
+        let profile = {
             name: "Anton",
             surname: "Petkov",
             email: "antonpetkov88@gmail.com",
         }
+        }
+        //Exercise 23 - Delete Email from the previously created object//
 
         delete profile.email;
+        console.log(profile)
 
-        let listOfStrings = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"];
+        //Exercise 24 - Create an array with 10 strings in it//
 
-        console.log(listOfStrings);
+        function createArrayWithString() {
+            let array = [];
+            for(let x=0; x<10; x++){
+                array.push("string " + (x + 1))
+            }
+            console.log(array)
+        }
 
-        document.getElementById("container")
 
-        document.querySelectorAll("td")
+        //Exercise 25 - Print in the console every string in the previous array//
 
+        function createArrayWithStringAndPrintIt() {
+            let array = [];
+            for(let x=0; x<10; x++){
+                array.push("string " + (x + 1))
+            }
+            for(let y=0; y<10;y++){
+                console.log(array[y])
+            }
+            }   
+            
+            //Exercise 26 - Create an array with 100 random numbers in it//
 
+            function createArrayWithRandomNumbers() {
+                let array = []
+                for(let x=0; x<100; x++) {
+                    array.push(Math.floor(Math.random() * 100))
+                }
+            }
+            console.log(array);
+            findMinAndMax(array);
 
-        //to be remove
+            /*Exercise 27 - Write a function to get the MAX and the MIN from
+             the previously created array*/
+
+            function findMinAndMax(array) {
+                // array parameter is a number filled array
+                let min;
+                let max;
+                //min is undefined, after the first loop min and max are actual values//
+                for(let x=0; x<array.lenght; x++) {
+                    if(array[x] < min){
+                        min = array[x]
+                    }
+                    if(array[x] > max){
+                        max = array[x]
+                    }
+                }
+                console.log("MIN" + Math.min(...array))
+                console.log("MAX" + Math.max(...array))
+
+            }
+
+            /*Exercise 28 Create an array of arrays, in which every array 
+            has 10 random numbers*/
+
+            function createArrayOfArrays() {
+                /*
+                [
+                    [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+                    [11, 12, 13, 14, 15, 16, 17, 18, 19, 110]
+                    ...
+                ]
+                */
+
+                let masterArray = [] //it is empty now
+                for(let x=0; x<5; x++){ //for five times
+                    let childArray = [] //creating array in the array
+                    for(let y=0; y<10; y++)
+                    childArray.push(Math.floor(Math.random()*10))
+                }
+                console.log("CHILDARRAY", childArray)
+                masterArray.push(childArray)
+            }
+            //masterArray is not empty anymore
+            console.log("MASTERARRAY", masterArray)
+
+            /*Exercise 29 - Create a function that gets 2 arrays and returns 
+            the longest one*/
+
+            function returnLongestArray(arr1, arr2) {
+                if(arr1.lenght > arr2.lenght ) { //lenght is a number
+                return arr1
+
+                } else if(arr1.lenght < arr2.lenght) {
+                    return arr2
+                } else { //if arr1=arr2 the same lenght
+                    return arr1
+                }
+            }
+
+            /*Exercise 30 - Create a function that gets 2 arrays of numbers 
+            and returns the one with the higher sum of values*/
+
+            function findArrayWithBiggestSum(arr1, arr2) {
+                let sum1 = 0
+                let sum2 = 0
+
+                for(let x=0; x<arr1.lenght; x++) {
+                    //sum1 = sum1 + arr1[x]
+                    sum1 += arr1[x]
+                }
+                // sum1 is the sum of all the arr1 elements
+
+                for (let y=0; y<arr2.lenght; y++) {
+                    sum2 = sum2 + arr2[y]
+                }
+                //sum2 is the sum of all the arr2 elements
+                console.log("SUM1 IS", sum1)
+                console.log("SUM2 IS", sum2)
+
+                if(sum1 > sum2) {
+                    console.log("the sum of the first array is bigger")
+                } else if(sum2 > sum1) {
+                    console.log("the sum of second array is bigger")
+                } else {
+                    console.log("their sum is the same")
+                }
+            }
+
+        /*DOM Exercises:
+
+        Exercise 31 - Get element with ID "container" from the page*/
+        
+        function findContainer() {
+            return document.querySelector("#container")
+        }
+
+        //Exercise 32 - Get every "td" from the page//
+
+        function getTds() {
+            return document.querySelectorAll("td")
+        }
+
+        //Exercise 33 - Create a cycle that prints the text inside every td of the page//
+
+        function printTds() {
+            let tds = document.querySelectorAll("td")
+            for(let x=0; x<tds.lenght; x++)
+            console.log(tds[x].innerText)
+        }
+        
+        //Exercise 34 - Write a function to change the heading of the page//
+
+        function changeHeading() {
+            document.querySelector("h1").innerText = "ANOTHER TITLE"
+        }
+
+        //Exercise 35 - Write a function to add an extra row to the table//
+
+        function addRow() {
+            let table = document.querySelector("table")
+            console.log(table)
+            let newRow = document.createElement("tr")
+            for(let x=0; x<5; x++){
+                let newCell = document.createElement("td")
+                newCell.innerText = x
+                newRow.appendChild(newCell)
+            }
+            console.log(newRow)
+            table.appendChild(newRow)
+        }
+
+        /*Exercise 36 - Write a function to add the 
+        class "test" to reach row in the table*/
+
+        function addClassToRows() {
+            let rows = document.querySelectorAll("tr")
+            for(let x=0; x<rows; x++){
+                rows[x].classList.add("test")
+            }        
+            
+        }
+        /*Exercise 37 Write a function to add a red background to 
+        every link in the page*/
+
+        function addRedBackground() {
+            let links = document.querySelectorAll("a")
+            for(let x=0; x<links.lenght; x++){
+                links[x].style.backgroundColor = "red"
+            }
+        }
+
+        //Exercise 38 - Console log "Page loaded" when the page is correctly loaded//
+
+        window.onload = function() {
+            console.log("PAGE LOADED")
+        }
+
+        //Exercise 39 - Write a function to add new items to a UL//
+
+        function addItemsToUl(){
+            let ul = document.querySelector("ul")
+            let newLi = document.createElement("li")
+            newLi.innerText = "hi"
+            ul.appendChild(newLi)
+        }
+
+        //Exercise 40 - Write a function to empty a list//
+
+        let li = document.querySelectorAll("ul li")
+        for(let x = 0; x < li.length; x++){
+            li[x].innerText = ""
+        }
 
 
 
@@ -249,6 +458,4 @@
     </script>
 
 
-</body>
-
-</html>
+    </body>
